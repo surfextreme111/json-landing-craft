@@ -1,0 +1,72 @@
+
+{
+  "colors": {
+    "primary": "#3b82f6",
+    "secondary": "#10b981",
+    "background": "#f9fafb"
+  },
+  "texts": {
+    "title": "Tu Negocio Innovador",
+    "description": "Ofrecemos soluciones de calidad para impulsar tu empresa al siguiente nivel. Descubre cómo podemos ayudarte a alcanzar tus objetivos.",
+    "ctaButton": "Comenzar Ahora",
+    "benefitsTitle": "Por qué elegirnos",
+    "benefits": [
+      {
+        "title": "Servicio Personalizado",
+        "description": "Adaptamos nuestras soluciones a tus necesidades específicas.",
+        "icon": "users"
+      },
+      {
+        "title": "Soporte 24/7",
+        "description": "Estamos disponibles para ayudarte en cualquier momento.",
+        "icon": "clock"
+      },
+      {
+        "title": "Resultados Garantizados",
+        "description": "Nos enfocamos en entregar resultados medibles y efectivos.",
+        "icon": "check"
+      }
+    ],
+    "footerText": "© 2025 Tu Negocio. Todos los derechos reservados."
+  },
+  "images": {
+    "logo": "https://via.placeholder.com/150x50.png?text=LOGO",
+    "hero": "https://via.placeholder.com/1200x600.png?text=HERO+IMAGE"
+  },
+  "links": {
+    "menu": [
+      {
+        "text": "Inicio",
+        "url": "#"
+      },
+      {
+        "text": "Servicios",
+        "url": "#benefits"
+      },
+      {
+        "text": "Contacto",
+        "url": "#footer"
+      }
+    ],
+    "social": [
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com",
+        "icon": "facebook"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com",
+        "icon": "twitter"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com",
+        "icon": "instagram"
+      }
+    ],
+    "whatsapp": "+5491123456789",
+    "email": "contacto@tunegocio.com",
+    "phone": "+5491123456789"
+  }
+}

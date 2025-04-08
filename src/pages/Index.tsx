@@ -1,12 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect, useState } from 'react';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Benefits from '../components/Benefits';
+import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
+import { loadConfig } from '../utils/configLoader';
+import { LandingPageConfig } from '../utils/types';
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+  const [config, setConfig] = useState<LandingPageConfig | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchConfig = async () => {
+      try {
+        // You can pass a URL to a custom JSON config here if needed
+        const loadedConfig = await loadConfig();
+        setConfig(loadedConfig);
+      } catch (error) {
+        console.error('Error loading configuration:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchConfig();
+  }, []);
+
+  if (loading || !config) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-pulse text-xl">Cargando...</div>
       </div>
+    );
+  }
+
+  return (
+    <div style={{ backgroundColor: config.colors.background }}>
+      <Header config={config} />
+      <Hero config={config} />
+      <Benefits config={config} />
+      <Footer config={config} />
+      {config.links.whatsapp && (
+        <WhatsAppButton 
+          whatsappNumber={config.links.whatsapp} 
+          color={config.colors.secondary} 
+        />
+      )}
     </div>
   );
 };
