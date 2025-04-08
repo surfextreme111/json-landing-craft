@@ -36,11 +36,14 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                   "text-sm font-medium transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:transition-all after:duration-300",
                 )}
                 style={{ 
-                  color: config.colors.primary,
-                  after: { backgroundColor: config.colors.primary }
+                  color: config.colors.primary
                 }}
               >
-                {item.text}
+                <span className="relative" style={{ 
+                  '--hover-underline-color': config.colors.primary 
+                } as React.CSSProperties}>
+                  {item.text}
+                </span>
               </a>
             ))}
           </nav>
