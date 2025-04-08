@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Benefits from '../components/Benefits';
+import LocationMap from '../components/LocationMap';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { loadConfig } from '../utils/configLoader';
@@ -41,6 +42,7 @@ const Index = () => {
       <Header config={config} />
       <Hero config={config} />
       <Benefits config={config} />
+      {config.location && <LocationMap config={config} />}
       <Footer config={config} />
       {config.links.whatsapp && (
         <WhatsAppButton 

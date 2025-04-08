@@ -15,6 +15,12 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Add a new menu item for the location
+  const menuItems = [
+    ...config.links.menu,
+    ...(config.location ? [{ text: config.texts.locationTitle || "Ubicación", url: "#location" }] : [])
+  ];
+
   return (
     <header 
       className="sticky top-0 z-50 w-full py-4 px-6 md:px-12"
@@ -28,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {config.links.menu.map((item, index) => (
+            {menuItems.map((item, index) => (
               <a
                 key={index}
                 href={item.url}
@@ -65,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <nav className="md:hidden mt-4 flex flex-col space-y-4 animate-fade-in">
-            {config.links.menu.map((item, index) => (
+            {menuItems.map((item, index) => (
               <a
                 key={index}
                 href={item.url}

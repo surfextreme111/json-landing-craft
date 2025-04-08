@@ -27,7 +27,8 @@
         "icon": "check"
       }
     ],
-    "footerText": "© 2025 Tu Negocio. Todos los derechos reservados."
+    "footerText": "© 2025 Tu Negocio. Todos los derechos reservados.",
+    "locationTitle": "Dónde estamos"
   },
   "images": {
     "logo": "https://via.placeholder.com/150x50.png?text=LOGO",
@@ -68,5 +69,11 @@
     "whatsapp": "+5491123456789",
     "email": "contacto@tunegocio.com",
     "phone": "+5491123456789"
+  },
+  "location": {
+    "address": "Av. del Libertador 101, Buenos Aires, Argentina",
+    "lat": -34.603722,
+    "lng": -58.381592,
+    "zoom": 15
   }
 }

@@ -16,6 +16,7 @@ export interface LandingPageConfig {
       icon: string;
     }[];
     footerText: string;
+    locationTitle?: string;
   };
   images: {
     logo: string;
@@ -34,5 +35,11 @@ export interface LandingPageConfig {
     whatsapp?: string;
     email?: string;
     phone?: string;
+  };
+  location?: {
+    address: string;
+    lat: number;
+    lng: number;
+    zoom: number;
   };
 }
